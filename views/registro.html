@@ -1,0 +1,88 @@
+
+	<h1>Registrate</h1>
+<div class="container">
+<div class="row">
+    <div class="form-wrapper">
+   		<div class="col-md-4">
+   			<form id="register-form">
+            <h2>Datos personales</h2>
+		          <div class="form-group">
+    			     <label for="name">Name</label>
+    				     <input type="name" class="form-control" id="name" placeholder="name" onfocus="clearError()">
+  				    </div>
+		 		      <div class="form-group">
+    				    <label for="email">Email address</label>
+    				    <input type="email" class="form-control" id="email" placeholder="Email" onfocus="clearError()">
+  				   </div>
+ 
+  				    <div class="form-group">
+    				    <label for="passwd1">Password</label>
+    				    <input type="password" class="form-control" id="passwd" placeholder="Password" onfocus="clearError()">
+  			     </div>
+  			    <div class="form-group">
+   					   <label for="passwd2">Confirm Password</label>
+    				   <input type="password" class="form-control" id="confirm-passwd" placeholder="Password" onfocus="clearError()">
+             </div>
+  				   <button type="submit" class="btn btn-default" onclick="saveUser(),nextForm('#personal-data-form')">Siguiente</button>
+		    </form>
+        <p  id="alert-box" class="bg-warning hidden"></p>
+		 </div>
+
+		     <div class="col-md-4">
+          <form id="personal-data-form" class="hidden">
+            <h2>Datos de envio</h2>
+               <div class="form-group">
+    			       <label for="street">Calle</label>
+    				     <input type="text" class="form-control" id="data-form-calle" placeholder="calle">
+  				     </div>
+		 		    <div class="form-group">
+    				  <label for="city">Ciudad</label>
+    				  <input type="text" class="form-control" id="data-form-city" placeholder="ciudad">
+  			   </div>
+   				  <div class="form-group">
+    				   <label for="zipcode">Codigo Postal</label>
+    				   <input type="text" class="form-control" id="data-form-zipcode" placeholder="C.P.">
+  			   </div>
+  			    <div class="form-group">
+   					  <label for="putation">Delegación</label>
+    				  <input type="text" class="form-control" id="data-form-putation" placeholder="delegacion">
+  		      </div>
+
+  				    <button type="submit" class="btn btn-default" onclick="saveAdd(),nextForm('#invoice-data-form')">Siguiente</button>
+              <p>La dirección de facturación es la misma?</p>
+
+              <div class="checkbox-wrapper checked" onclick="toggleChecked(this)">
+               <div class="checkbox">&#10003;</div>
+                </div>
+		      </form>
+
+        </div>
+	   <div class="col-md-4">
+			   <form id="invoice-data-form" class="hidden">
+         <h2>Datos de facturación</h2>
+		      <div class="form-group">
+    			  <label for="street">Calle</label>
+    				 <input type="text" class="form-control" id="invoice-data-form-calle" placeholder="calle">
+  				</div>
+		 		  <div class="form-group">
+    				<label for="city">Ciudad</label>
+    				<input type="text" class="form-control" id="invoice-data-form-city" placeholder="ciudad">
+  				</div>
+ 
+  				<div class="form-group">
+    				   <label for="zipcode">Codigo Postal</label>
+    				  <input type="text" class="form-control" id="invoice-data-form-zipcode" placeholder="C.P.">
+  			   </div>
+  			   <div class="form-group">
+   					<label for="putation">Delegación</label>
+    				<input type="text" class="form-control" id="invoice-data-form-putation" placeholder="delegacion">
+  				</div>
+  				 <button type="submit" class="btn btn-default" onclick="saveInvoice(),checkInfo()">Resumen datos</button>
+		    </form>
+
+	   </div>
+    </div>
+</div>
+</div>
+
+	
